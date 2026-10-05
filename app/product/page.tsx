@@ -44,6 +44,8 @@
 // // <Client Side Search Params/>
 // -------------------------------------
 
+// // <Client Side useSearchParams>
+"use client";
 import { useSearchParams } from "next/navigation";
 
 function ProductList() {
