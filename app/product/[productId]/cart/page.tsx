@@ -1,4 +1,4 @@
-import Count from "@/app/_lib/count";
+import Count from "@/components/count";
 
 function Cart() {
   return (
