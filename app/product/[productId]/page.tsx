@@ -6,7 +6,7 @@ async function ProductDetail({
   params: Promise<{ productId: string }>;
 }) {
   const { productId } = await params;
-  return <div> ProductDetail - {productId}</div>;
+  return <div>ProductDetail - {productId}</div>;
 }
 
 export default ProductDetail;
