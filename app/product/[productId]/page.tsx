@@ -1,6 +1,13 @@
 "use client";
 
-import React, { use } from "react";
+import { useParams } from "next/navigation";
+
+function ProductDetail() {
+  const { productId } = useParams<{ productId: string }>();
+  return <div>ProductDetail - {productId}</div>;
+}
+
+export default ProductDetail;
 
 // async function ProductDetail({
 //   params,
@@ -16,10 +23,8 @@ import React, { use } from "react";
 //   return <div>ProductDetail - {productId}</div>;
 // }
 
-function ProductDetail(props: PageProps<"/product/[productId]">) {
-  //   const { productId } = await props.params;
-  const { productId } = use(props.params);
-  return <div>ProductDetail - {productId}</div>;
-}
-
-export default ProductDetail;
+// function ProductDetail(props: PageProps<"/product/[productId]">) {
+//   //   const { productId } = await props.params;
+//   const { productId } = use(props.params);
+//   return <div>ProductDetail - {productId}</div>;
+// }
