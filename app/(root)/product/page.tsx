@@ -7,7 +7,7 @@ async function ProductList({
   const { page = 1, category = "", query = "" } = await searchParams;
   return (
     <div>
-      <h1>ProductList - {new Date().toLocaleDateString()}</h1>
+      <h1>ProductList - {new Date().toLocaleTimeString()}</h1>
       <p>Current page - {page}</p>
       <p>category - {category}</p>
       <p>query - {query}</p>
