@@ -1,34 +1,36 @@
-import Carousel from "@/components/carousel";
+// import Carousel from "@/components/carousel";
 import Link from "next/link";
 
 export default function Home() {
-  const items = [
-    {
-      id: "1",
-      src: "https://example.com/image1.jpg",
-      alt: "Beautiful landscape",
-      title: "Amazing View",
-      description: "A stunning landscape photograph",
-    },
-    {
-      id: "2",
-      src: "https://example.com/image2.jpg",
-      alt: "City skyline",
-      title: "Urban Life",
-      description: "The vibrant city at night",
-    },
-  ];
+  // const items = [
+  //   {
+  //     id: "1",
+  //     src: "https://example.com/image1.jpg",
+  //     alt: "Beautiful landscape",
+  //     title: "Amazing View",
+  //     description: "A stunning landscape photograph",
+  //   },
+  //   {
+  //     id: "2",
+  //     src: "https://example.com/image2.jpg",
+  //     alt: "City skyline",
+  //     title: "Urban Life",
+  //     description: "The vibrant city at night",
+  //   },
+  // ];
   return (
     <div className="flex min-h-screen flex-col">
-      <h1 className="bg-amber-300 p-4 text-2xl font-bold">Hello</h1>
+      <h1 className="bg-amber-300 p-4 text-2xl font-bold">
+        Hello - {new Date().toLocaleTimeString()}
+      </h1>
       <Link href="/login">Go to Login</Link>
       <Link href="/product">Go to Product</Link>
-      <Carousel
+      {/* <Carousel
         items={items}
         autoplay={{ enabled: true, interval: 3000 }}
         infinite
         pauseOnHover
-      />
+      /> */}
     </div>
   );
 }
