@@ -1,11 +1,12 @@
 "use client";
 
-import { notFound, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 function ProductDetail() {
   const { productId } = useParams<{ productId: string }>();
-  if (Number(productId) > 100) {
-    notFound();
+  if (Number(productId) > 110) {
+    // notFound();
+    throw new Error("Product not found");
   }
   return <div>ProductDetail - {productId}</div>;
 }
