@@ -1,17 +1,15 @@
-"use client";
+// "use client";
 
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 
-function ProductDetail() {
-  const { productId } = useParams<{ productId: string }>();
-  if (Number(productId) > 110) {
-    // notFound();
-    throw new Error("Product not found");
-  }
-  return <div>ProductDetail - {productId}</div>;
-}
-
-export default ProductDetail;
+// function ProductDetail() {
+//   const { productId } = useParams<{ productId: string }>();
+//   if (Number(productId) > 110) {
+//     // notFound();
+//     throw new Error("Product not found");
+//   }
+//   return <div>ProductDetail - {productId}</div>;
+// }
 
 // async function ProductDetail({
 //   params,
@@ -22,10 +20,13 @@ export default ProductDetail;
 //   return <div>ProductDetail - {productId}</div>;
 // }
 
-// async function ProductDetail(props: PageProps<"/product/[productId]">) {
-//   const { productId } = await props.params;
-//   return <div>ProductDetail - {productId}</div>;
-// }
+async function ProductDetail(props: PageProps<"/product/[productId]">) {
+  const { productId } = await props.params;
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return <div>ProductDetail - {productId}</div>;
+}
+
+export default ProductDetail;
 
 // function ProductDetail(props: PageProps<"/product/[productId]">) {
 //   //   const { productId } = await props.params;
