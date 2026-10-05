@@ -46,9 +46,10 @@
 
 // // <Client Side useSearchParams>
 "use client";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-function ProductList() {
+function ProductListContent() {
   const searchParams = useSearchParams();
   const page = searchParams.get("page") || 1;
   const category = searchParams.get("category") || "";
@@ -60,6 +61,14 @@ function ProductList() {
       <p>category - {category}</p>
       <p>query - {query}</p>
     </div>
+  );
+}
+
+function ProductList() {
+  return (
+    <Suspense fallback={<h1>ProductList</h1>}>
+      <ProductListContent />
+    </Suspense>
   );
 }
 
