@@ -1,6 +1,4 @@
-"use client";
-
-import Carousel from "acme-carousel";
+import Carousel from "@/components/carousel";
 import Link from "next/link";
 
 export default function Home() {
