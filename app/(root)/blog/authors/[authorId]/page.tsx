@@ -1,3 +1,9 @@
+// ISR - Incremental Static Regeneration
+// Time based revalidation - revalidate every 60 seconds
+// On-demand revalidation - revalidate on demand using revalidatePath() or revalidateTag()
+
+export const revalidate = 60; // revalidate every 60 seconds but is should be more than 1 hour
+
 export async function generateStaticParams() {
   // const authors = await fetch(
   //   "https://jsonplaceholder.typicode.com/users",
