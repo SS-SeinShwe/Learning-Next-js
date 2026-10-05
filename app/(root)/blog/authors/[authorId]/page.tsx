@@ -1,6 +1,8 @@
 // ISR - Incremental Static Regeneration
 // Time based revalidation - revalidate every 60 seconds
 // On-demand revalidation - revalidate on demand using revalidatePath() or revalidateTag()
+export const dynamicParams = false; // disable dynamic parameters for this route
+// if true, it can generate pages on the fly for new params
 
 export const revalidate = 60; // revalidate every 60 seconds but is should be more than 1 hour
 
