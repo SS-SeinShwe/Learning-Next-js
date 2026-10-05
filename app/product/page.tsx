@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-function ProductList() {
+async function ProductList({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const { page = 1, category = "", query = "" } = await searchParams;
   return (
-    <div>ProductList</div>
-  )
+    <div>
+      <h1>ProductList</h1>
+      <p>Current page - {page}</p>
+      <p>category - {category}</p>
+      <p>query - {query}</p>
+    </div>
+  );
 }
 
-export default ProductList
+export default ProductList;
