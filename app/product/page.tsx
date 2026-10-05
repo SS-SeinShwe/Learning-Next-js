@@ -1,11 +1,13 @@
-import React from "react";
+"use client";
 
-async function ProductList({
+import { use } from "react";
+
+function ProductList({
   searchParams,
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { page = 1, category = "", query = "" } = await searchParams;
+  const { page = 1, category = "", query = "" } = use(searchParams);
   return (
     <div>
       <h1>ProductList</h1>
