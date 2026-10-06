@@ -7,7 +7,9 @@ interface Post {
 
 async function BlogList() {
   // Simulate slow data fetching
-  const response = await fetch("http://localhost:4000/posts");
+  const response = await fetch("http://localhost:4000/posts", {
+    next: { revalidate: 120 },
+  });
   if (!response.ok) {
     throw new Error("Failed to fetch posts");
   }
