@@ -10,7 +10,8 @@ async function BlogList() {
   // Simulate slow data fetching
   const response = await fetch("http://localhost:4000/posts", {
     // next: { revalidate: 120 },
-    cache: "no-store", // Disable caching to always fetch fresh data
+    // cache: "no-store", // Disable caching to always fetch fresh data
+    cache: "force-cache", // Enable caching to use cached data if available
   });
   if (!response.ok) {
     throw new Error("Failed to fetch posts");
