@@ -24,7 +24,12 @@ export default function Home() {
         Hello - {new Date().toLocaleTimeString()}
       </h1>
       <Link href="/login">Go to Login</Link>
-      <Link href="/product">Go to Product</Link>
+      <div className="min-h-screen flex-1">Testing for Prefetching</div>
+      <div className="min-h-screen flex-1">Using Link</div>
+      <Link href="/product">Go to Product</Link>{" "}
+      <Link href="/dashboard" className="text-blue-500 underline">
+        Dashboard
+      </Link>
       {/* <Carousel
         items={items}
         autoplay={{ enabled: true, interval: 3000 }}
