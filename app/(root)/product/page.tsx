@@ -5,6 +5,7 @@ async function ProductList({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { page = 1, category = "", query = "" } = await searchParams;
+
   return (
     <div>
       <h1>ProductList - {new Date().toLocaleTimeString()}</h1>

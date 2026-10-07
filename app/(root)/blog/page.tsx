@@ -9,9 +9,12 @@ async function BlogList() {
   await new Promise((resolve) => setTimeout(resolve, 5000)); // Simulate slow data fetching with a 5-second delay
   // Simulate slow data fetching
   const response = await fetch("http://localhost:4000/posts", {
-    // next: { revalidate: 120 },
+    next: {
+      // revalidate: 120 // time-base validation // Revalidate the data every 120 seconds (2 minutes) called
+      tags: ["posts"], // On-demand revalidation
+    },
     // cache: "no-store", // Disable caching to always fetch fresh data
-    cache: "force-cache", // Enable caching to use cached data if available
+    // cache: "force-cache", // Enable caching to use cached data if available
   });
   if (!response.ok) {
     throw new Error("Failed to fetch posts");

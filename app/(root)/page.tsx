@@ -24,6 +24,7 @@ export default function Home() {
         Hello - {new Date().toLocaleTimeString()}
       </h1>
       <Link href="/login">Go to Login</Link>
+      <Link href="/blog">Go to blog page</Link>
       <div className="min-h-screen flex-1">Testing for Prefetching</div>
       <div className="min-h-screen flex-1">Using Link</div>
       <Link href="/product">Go to Product</Link>{" "}

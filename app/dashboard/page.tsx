@@ -3,6 +3,7 @@ import Link from "next/link";
 import UserProfile from "@/components/dashboard/userProfile";
 import Statistics from "@/components/dashboard/statistics";
 import RecentActivity from "@/components/dashboard/recentActivity";
+import { regreshPostsCache } from "../actions/posts";
 
 export default function Dashboard() {
   return (
@@ -11,6 +12,14 @@ export default function Dashboard() {
       <Link href="/" className="text-blue-500 underline">
         Go Home
       </Link>
+      <form action={regreshPostsCache} >
+        <button
+          type="submit"
+          className="mt-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+        >
+          Refresh Posts
+        </button>
+      </form>
       <p className="mb-8 text-gray-600">
         This page loads immediately while components stream in
       </p>
